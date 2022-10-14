@@ -21,7 +21,7 @@ stage('Build')
 sh "${mavenhome}/bin/mvn package"
 }
 
-/*
+
 stage('excuteSonarQubeReport')
 {
 sh "${mavenhome}/bin/mvn clean sonar:sonar"
@@ -36,7 +36,7 @@ stage('DeployappintoTomcat')
     sh "scp -o StrictHostKeyChecking=no target/maven-web-application.war ec2-user@172.31.42.73:/opt/apache-tomcat-9.0.65/webapps/"
 }
 }
-*/
+
 }//tryclosing
 catch(e){
 currentBuild.result="FAILURE"
