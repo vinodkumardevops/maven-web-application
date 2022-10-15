@@ -1,5 +1,5 @@
 
-node{
+node('walmartnode'){
   try{ 
   
  slackNotifications('STARTED')
